@@ -3,8 +3,8 @@
 pragma solidity ^0.8.19;
 
 import {Test, console} from "lib/forge-std/src/Test.sol";
-import {FundMe} from "../src/FundMe.sol";
-import {DeployFundMe} from "../script/DeployFundMe.s.sol";
+import {FundMe} from "../../src/FundMe.sol";
+import {DeployFundMe} from "../../script/DeployFundMe.s.sol";
 
 contract FundMeTest is Test {
     uint256 number = 1;
@@ -104,6 +104,7 @@ contract FundMeTest is Test {
             fundMe.getOwner().balance
         );
     }
+
     function testWithdrawFromMultipleFunders() public funded {
         uint160 numberOfFunders = 10;
         uint160 startingFunderIndex = 1;
